@@ -45,6 +45,11 @@ export default [
       // точка с запятой везде
       semi: ["error", "always"],
 
+      indent: ["error", 2, {
+        "ArrayExpression": 1,
+        "ObjectExpression": 1,
+      }],
+
       // первый тег и его закрывающаяя скобка ">"
       "vue/html-closing-bracket-newline": ["error", {
         "singleline": "never",
