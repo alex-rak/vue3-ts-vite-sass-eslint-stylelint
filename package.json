@@ -1,0 +1,48 @@
+{
+  "name": "vite-ts-scss",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint",
+    "ts": "vue-tsc --noEmit",
+    "stylelint": "stylelint ./**/*.{scss,css,vue} --max-warnings=0"
+  },
+  "dependencies": {
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --fix",
+    "*.{css,scss,vue}": "stylelint --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.4.0",
+    "@types/node": "^20.14.2",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "eslint": "^9.4.0",
+    "eslint-plugin-vue": "^9.26.0",
+    "globals": "^15.4.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
+    "sass": "^1.77.4",
+    "stylelint": "^16.6.1",
+    "stylelint-config-recommended-scss": "^14.0.0",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^6.0.4",
+    "typescript": "^5.2.2",
+    "typescript-eslint": "^8.0.0-alpha.29",
+    "vite": "^5.2.0",
+    "vue-tsc": "^2.0.6"
+  }
+}
