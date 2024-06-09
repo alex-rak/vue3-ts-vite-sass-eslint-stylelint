@@ -3,6 +3,7 @@ import { useMainStore } from "@store/main";
 import { useExtraStore } from "@store/extraStore";
 import { storeToRefs } from "pinia";
 
+
 const extra = useExtraStore();
 const main = useMainStore();
 const { count } = storeToRefs(main);

@@ -7,23 +7,15 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint",
+    "lint": "eslint --max-warnings=0",
     "ts": "vue-tsc --noEmit",
-    "stylelint": "stylelint ./**/*.{scss,css,vue} --max-warnings=0"
+    "stylelint": "stylelint ./**/*.{scss,css,vue} --max-warnings=0",
+    "prepare": "husky install"
   },
   "dependencies": {
     "pinia": "^2.1.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": "eslint --fix",
-    "*.{css,scss,vue}": "stylelint --fix"
   },
   "devDependencies": {
     "@eslint/js": "^9.4.0",
@@ -32,7 +24,7 @@
     "eslint": "^9.4.0",
     "eslint-plugin-vue": "^9.26.0",
     "globals": "^15.4.0",
-    "husky": "^9.0.11",
+    "husky": "^8.0.0",
     "lint-staged": "^15.2.5",
     "sass": "^1.77.4",
     "stylelint": "^16.6.1",

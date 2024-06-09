@@ -16,14 +16,8 @@ export default [
       "**/*.cts",
       "**/*.mts",
     ],
-    languageOptions: { globals: globals.node },
-  },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-  ...pluginVue.configs["flat/recommended"],
-  {
-    files: ["**/*.vue"],
     languageOptions: {
+      globals: globals.node,
       parserOptions: {
         parser: {
           "js": "espree",
@@ -38,6 +32,9 @@ export default [
       },
     },
   },
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  ...pluginVue.configs["flat/recommended"],
   {
     ignores: ["dist/", "node_modules/"],
   },
@@ -54,8 +51,8 @@ export default [
         "multiline": "always",
         "selfClosingTag": {
           "singleline": "never",
-          "multiline": "always"
-        }
+          "multiline": "always",
+        },
       }],
       "vue/multi-word-component-names": ["error", {
         "ignores": [],
