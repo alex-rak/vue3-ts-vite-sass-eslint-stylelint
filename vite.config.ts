@@ -32,6 +32,7 @@ export default defineConfig({
       ],
       eslintrc: {
         "enabled": true,
+        filepath: fileURLToPath(new URL("./eslint.auto-import.config.json", import.meta.url)),
       },
     }),  
   ],

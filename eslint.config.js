@@ -2,7 +2,7 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginVue from "eslint-plugin-vue";
-import autoImport from  "./.eslintrc-auto-import.json"  assert { type: "json" };
+import autoImport from  "./eslint.auto-import.config.json" assert {type: "json"};
 
 export default [
   {
@@ -21,7 +21,7 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...autoImport.languageOptions.globals,
+        ...autoImport.globals,
       },
       parserOptions: {
         parser: {
