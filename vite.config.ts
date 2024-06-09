@@ -9,6 +9,11 @@ import {
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "./",
+  server: {
+    port: 8080,
+    host: "0.0.0.0",
+    open: true,
+  },
   plugins: [
     vue(),
     Components({
@@ -25,6 +30,9 @@ export default defineConfig({
         "vue", 
         "vue-router",
       ],
+      eslintrc: {
+        "enabled": true,
+      },
     }),  
   ],
   resolve: {
